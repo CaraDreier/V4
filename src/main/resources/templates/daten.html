@@ -1,13 +1,26 @@
 <!DOCTYPE HTML>
 <html xmlns:th="https://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Handling Form Submission</title>
+    <title>Datenabfrage</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
 <h1>Form</h1>
 <form action="#" th:action="@{/daten}" th:object="${daten}" method="post">
-  <p>Id: <input type="text" th:field="*{id}" /></p>
+
+    <p>Name Kunde: <input type="text" th:field="*{nameKunde}" /></p>
+
+    <p>Adresse Kunde: <input type="text" th:field="*{adresse}" /></p>
+
+    <p>Name Projektersteller: <input type="text" th:field="*{nameProjektersteller}" /></p>
+
+    <p>Publikumsverkehr:</p>
+        <input type="radio" id="pv1"  value="Wohngebäude" th:field="*{pv}"><label for="pv1">Wohngebäude</label></p>
+    <input type="radio" id="pv2"  value="Bürogebäude mit niedrigem Publikumsverkehr" th:field="*{pv}"><label for="pv2">Bürogebäude mit niedrigem Publikumsverkehr</label></p>
+    <input type="radio" id="pv3" value="Keine der beiden Optionen" th:field="*{pv}"><label for="pv3">Keine der beiden Optionen</label></p>
+
+
+
     <p>Turmanzahl: <input type="text" th:field="*{turmanzahl}" /></p>
     <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
 </form>

@@ -16,7 +16,13 @@ public class PDatenService {
 
     public PDaten createPDaten (PDaten pDaten){
         PDaten pDaten1 = new PDaten();
+        pDaten1.setNameKunde(pDaten.getNameKunde());
+        pDaten1.setAdresse(pDaten.getAdresse());
+        pDaten1.setNameProjektersteller(pDaten.getNameProjektersteller());
+        pDaten1.setPv(pDaten.getPv());
         pDaten1.setTurmanzahl(pDaten.getTurmanzahl());
+
+
 
         PDaten newPDaten= pDatenRepository.save(pDaten1);
         return null;
