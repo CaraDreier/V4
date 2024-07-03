@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Turm</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Form Turm</h1>
+<form action="#" th:action="@{/turm}" th:object="${turm}" method="post">
+
+    <p>Anzahl Balkone Turm: <input type="number" th:field="*{anzahlBalkone}" /></p>
+
+    <p>Balkongeländerhöhe über F.F in mm: <input type="number" th:field="*{balkongeländerhöheÜberFF}" /></p>
+
+    <p>Füllhöhe Glasgeländer in mm: <input type="number" th:field="*{füllhöheGlasgeländer}" /></p>
+
+    <p>Breite in mm: <input type="number" th:field="*{breite}" /></p>
+
+    <p>Tiefe1 in mm: <input type="number" th:field="*{tiefe1}" /></p>
+
+    <p>Tiefe2 in mm: <input type="number" th:field="*{tiefe2}" /></p>
+
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>
