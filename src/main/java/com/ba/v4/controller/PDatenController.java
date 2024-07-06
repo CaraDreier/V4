@@ -24,10 +24,12 @@ public class PDatenController {
         return "daten";
     }
     @PostMapping("/daten")
-    public PDaten pDatenSubmit(@ModelAttribute PDaten pDaten, Model model){
+    public Object pDatenSubmit(@ModelAttribute PDaten pDaten, Model model){
         model.addAttribute("daten", pDaten);
 
-        return pDatenService.createPDaten(pDaten);
+        pDatenService.createPDaten(pDaten);
+
+        return "redirect:/turm";
     }
 
 }
